@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.8 on win32)" generated="2025-02-12T14:18:26.284028" rpa="false" schemaversion="5">
+<suite id="s1" name="Tc03" source="C:\66022703\testcase1\tc03.robot">
+<test id="s1-t1" name="Verify Product Quantity In Cart" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-12T14:18:26.402526" level="INFO">Opening browser 'Chrome' to base url 'http://automationexercise.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-12T14:18:26.402526" elapsed="6.367192"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-12T14:18:32.769718" elapsed="0.001993"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@class='logo pull-left']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-12T14:18:32.772708" elapsed="0.012957"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-12T14:18:32.789651" level="INFO">Current page contains element 'xpath=//div[@class='logo pull-left']'.</msg>
+<arg>xpath=//div[@class='logo pull-left']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-12T14:18:32.785665" elapsed="0.003986"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-12T14:18:32.789651" level="INFO">Clicking element 'xpath=(//a[contains(text(),'View Product')])[1]'.</msg>
+<arg>xpath=(//a[contains(text(),'View Product')])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-12T14:18:32.789651" elapsed="1.359625"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@class='product-information']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-12T14:18:34.149276" elapsed="0.011959"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-12T14:18:34.166219" level="INFO">Current page contains element 'xpath=//div[@class='product-information']'.</msg>
+<arg>xpath=//div[@class='product-information']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-12T14:18:34.162232" elapsed="0.003987"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='quantity']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-12T14:18:34.167215" elapsed="0.023920"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-12T14:18:34.191135" level="INFO">Typing text '4' into text field 'xpath=//input[@id='quantity']'.</msg>
+<arg>xpath=//input[@id='quantity']</arg>
+<arg>4</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-12T14:18:34.191135" elapsed="0.050830"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-12T14:18:34.241965" level="INFO">Clicking element 'xpath=//button[@type='button' and contains(., 'Add to cart')] | //a[contains(@class, 'add-to-cart')]'.</msg>
+<arg>xpath=//button[@type='button' and contains(., 'Add to cart')] | //a[contains(@class, 'add-to-cart')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-12T14:18:34.241965" elapsed="0.042857"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//u[contains(text(),'View Cart')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-12T14:18:34.284822" elapsed="0.642813"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-12T14:18:34.928639" level="INFO">Clicking element 'xpath=//u[contains(text(),'View Cart')]'.</msg>
+<arg>xpath=//u[contains(text(),'View Cart')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-12T14:18:34.928639" elapsed="0.934079"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//section[@id='cart_items']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-12T14:18:35.863711" elapsed="0.009022"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-02-12T14:18:35.876671" level="INFO">Current page contains element 'xpath=//section[@id='cart_items']'.</msg>
+<arg>xpath=//section[@id='cart_items']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-02-12T14:18:35.872733" elapsed="0.003938"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-12T14:18:35.888631" level="INFO">${quantity} = 4</msg>
+<var>${quantity}</var>
+<arg>xpath=//td[@class='cart_quantity']/button</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-12T14:18:35.876671" elapsed="0.011960"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${quantity}</arg>
+<arg>4</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-12T14:18:35.888631" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-12T14:18:35.888631" elapsed="2.056749"/>
+</kw>
+<status status="PASS" start="2025-02-12T14:18:26.402526" elapsed="11.543548"/>
+</test>
+<status status="PASS" start="2025-02-12T14:18:26.284974" elapsed="11.663056"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tc03" id="s1" pass="1" fail="0" skip="0">Tc03</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
